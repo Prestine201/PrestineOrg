@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestine Org - About Us</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styleNSTP5.css">
+</head>
+<body>
+
+<div class="topnav">
+  <div class="nav-left">
+  <img src="Logo3.png" alt="Logo" class="logo">
+  <span class="brand">Prestine</span>
+</div>
+  <div class="nav-right" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">AboutUs</a>
+    <a href="Project Gallery.html">ProjectGallery</a>
+    <a href="Diary.html">Diary</a>
+    <a href="Contact.html" class="active">Contact Us</a>
+  </div>
+  <div class="icon" onclick="toggleNav()">
+    <i class="fa fa-bars"></i>
+  </div>
+</div>
+<div class="nav-separator"></div>
+
+<script>
+function toggleNav() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("show");
+}
+</script>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-left">
+      <img src="logo1.2.png" alt="Prestine Logo" class="contact-logo">
+    </div>
+    <div class="contact-right">
+      <h2>Get in touch</h2>
+<form action="https://formspree.io/f/mkgrejzj"
+      method="POST"
+      class="contact-form"
+      id="contactForm"
+      onsubmit="showThankYou(event)">
+      <div id="thankYouMessage" class="thank-you-message">Thank you! Your message has been sent. 💌</div>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div> 
+
+</section> 
+
+<script>
+  function showThankYou(event) {
+    event.preventDefault();
+
+    const form = document.getElementById("contactForm");
+    const thankYou = document.getElementById("thankYouMessage");
+
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        thankYou.style.display = "block";
+        thankYou.style.opacity = "1";
+        form.reset();
+
+        // Fade out after 5 seconds
+        setTimeout(() => {
+          thankYou.style.opacity = "0";
+          setTimeout(() => {
+            thankYou.style.display = "none";
+            thankYou.style.opacity = "1"; // reset for next time
+          }, 500);
+        }, 5000);
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    });
+  }
+</script>
+
+
+<footer class="footer">
+  <h4>For educational purposes only &copy; Prestine 2025</h4>
+  <p>National Service Training Program</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestine Org</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styleNSTP.css">
+</head>
+<body>
+
+<div class="topnav">
+  <div class="nav-left">
+  <img src="Logo3.png" alt="Logo" class="logo">
+  <span class="brand">Prestine</span>
+</div>
+  <div class="nav-right" id="navLinks">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="Project Gallery.html">Project Gallery</a>
+    <a href="Diary.html">Diary</a>
+    <a href="Contact.html">Contact Us</a>
+  </div> 
+  <div class="icon" onclick="toggleNav()">
+    <i class="fa fa-bars"></i>
+  </div>
+</div>
+
+<script>
+function toggleNav() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("show");
+}
+</script>
+
+<header>
+  <div class="overlay"></div>
+  <video playsinline autoplay muted loop>
+    <source src="headvid.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">Pamilya Mission: <br>Clean Possible!</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="content1">
+  <h1>Pamilya Mission: Clean Possible!</h1>
+  <p>The “Pamilya Mission: Clean Possible!” was a donation drive conducted on Friday, April 28, 2025, from 7:00 AM to 11:00 AM at Exodus Floodway in Taytay, Rizal. This project mainly provided families essential cleaning materials that purposely sustain a safe and healthy environment. Besides, this project advocated cleanliness, environmental responsibility and awareness, and built up parent-child relationships. It encouraged participants to assimilate cleaning practices that particularly impact their household and the community as well. To make sure of its effectiveness, the representatives showcased different interactive activities and performance. These demonstrated the importance of understanding teamwork and cleanliness. The initiative empowered the participants to take their responsibilities in nurturing the environment and maintaining cleanliness.</p>
+</div>
+
+<div class="row1">
+  <div class="column">
+    <img src="Display1.jpg" alt="Display 1" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Display2.jpg" alt="Display 2" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Display3.jpg" alt="Display 3" style="width:100%">
+  </div>
+</div>
+
+<footer class="footer">
+  <h4>For educational purposes only &copy; Prestine 2025</h4>
+  <p>National Service Training Program</p>
+</footer>
+
+</body>
+</html>
