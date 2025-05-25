@@ -143,6 +143,16 @@ header video {
   transform: translate(-50%, -50%);
 }
 
+.video-clickable-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  display: block;
+}
+
 header .display-3 {
   text-align: center;
   font-family: 'Caveat Brush', sans-serif;
