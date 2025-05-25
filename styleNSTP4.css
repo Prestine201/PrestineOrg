@@ -227,16 +227,77 @@ html, body {
   padding-left: 10px;
 }
 
-.row1 {
-  padding: 24px 40px;
-  max-width: 1000px;
-  text-align: justify;
-  text-align-last: left;
-  font-family: 'Nunito', sans-serif;
-  margin: 40px auto;
-  line-height: 1.7;
-}
 
+.highlight-section {
+      background-color: white;
+      border: 2px solid #dff2f5;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .highlight-section h2 {
+      font-family: 'Raleway', sans-serif;
+      color: #403e3b;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .highlight-section p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05em;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .highlight-section b {
+      color: #567175;
+    }
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 20px;
+  }
+
+  .gallery-row,
+  .gallery-row.reverse {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .gallery-row img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .gallery-text {
+    text-align: justify;
+    padding: 0 10px;
+  }
+
+  .highlight-section {
+    padding: 25px 20px;
+    margin: 20px 15px;
+    border-radius: 10px;
+  }
+
+  .highlight-section h2 {
+    font-size: 1.3em;
+  }
+
+  .highlight-section p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+}
 
 
 /* ========== FOOTER ========== */
