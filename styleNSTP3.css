@@ -191,7 +191,17 @@ html, body {
       font-size: 1.5em;
       color: #5a5a5a;
       margin-top: 10px;
-    }
+    } 
+
+    @media (max-width: 600px) {
+  .background-polaroid.left {
+    transform: rotate(-10deg) translateX(-10px);
+  }
+  .background-polaroid.right {
+    transform: rotate(10deg) translateX(10px);
+  }
+}
+
     .diary-text {
       max-width: 800px;
       margin: 0 auto;
@@ -232,17 +242,30 @@ html, body {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 900px) {
-  .diary-entries {
-    column-count: 2;
-  }
-}
+.highlight-section {
+      background-color: white;
+      padding: 50px;
+      margin: 20px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: justify;
+    }
+
+    .highlight-section p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05em;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
 
 @media screen and (max-width: 600px) {
   .diary-entries {
     column-count: 1;
   }
 }
+
 
 /* ========== FOOTER ========== */
 .footer {
